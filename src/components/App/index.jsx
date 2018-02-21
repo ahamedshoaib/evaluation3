@@ -1,5 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import AppBar from '../AppBar';
+import Library from '../Library';
+
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,14 +16,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div >
-        hello
+      <div className="app">
+        <AppBar />
+        <Library />
       </div>
     );
   }
 }
-App.defaultProps = {
-};
-App.propTypes = {
-};
+
 export default App;
