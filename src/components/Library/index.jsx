@@ -9,6 +9,7 @@ class Library extends React.Component {
     super(props);
 
     this.state = {
+      page: 1,
       library: {},
     };
   }
@@ -21,12 +22,30 @@ class Library extends React.Component {
     fetch('/books/db')
       .then(response => response.json())
       .then((library) => {
-        console.log(library);
-        this.setState({
-          library,
-        });
+        if (Object.keys(library).length > 0) {
+          this.setState({
+            library,
+            page: 2,
+          });
+        }
       });
   };
+
+  importLibrary = () => {
+    fetch('/books/save')
+      .then(() => {
+        fetch('/books/db')
+          .then(response => response.json())
+          .then((library) => {
+            if (Object.keys(library).length > 0) {
+              this.setState({
+                library,
+                page: 2,
+              });
+            }
+          });
+      });
+  }
 
   renderBookshelves = () => {
     const bookshelves = [];
@@ -41,6 +60,19 @@ class Library extends React.Component {
   }
 
   render() {
+    if (this.state.page === 1) {
+      return (
+        <div className="library">
+          <div className="library-name">
+            the book shelf
+          </div>
+          <div className="library-import">
+            import now
+            <button onClick={this.importLibrary}>import</button>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="library">
         <div className="library-name">

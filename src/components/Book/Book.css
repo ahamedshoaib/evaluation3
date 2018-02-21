@@ -1,0 +1,45 @@
+.book {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  background-image: url('../../images/book.jpg');
+  margin: 20px;
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  background-size: contain;
+}
+
+.book-info {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.book-info-name {
+  font-weight: bold;
+  font-size: 12px;
+}
+.book-info-rating {
+  font-weight: 100;
+  font-size: 24px;
+}
+.book-info-author {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: right;
+}
+
+.like-button {
+  position: relative;
+  top: -30px;
+  left: 120px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px solid black;
+}

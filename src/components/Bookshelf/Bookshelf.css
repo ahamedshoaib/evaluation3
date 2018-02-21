@@ -1,8 +1,18 @@
 .bookshelf {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #f9883a;
 }
 
 .shelf-name {
   background-color: white;
+}
+
+.shelf-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  justify-content: flex-start;
 }

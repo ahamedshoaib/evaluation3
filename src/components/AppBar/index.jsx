@@ -4,7 +4,7 @@ import './AppBar.css';
 
 const AppBar = props => (
   <div className="app-bar">
-    A
+    <button className="app-bar-home" />
   </div>
 );
 

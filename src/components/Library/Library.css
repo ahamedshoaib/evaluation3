@@ -4,3 +4,10 @@
   justify-content: flex-start;
   flex-grow: 1;
 }
+
+.library-import {
+  background-color: #f9883a;
+  border-radius: 5px;
+  flex-grow: 1;
+  margin: 25%;
+}
